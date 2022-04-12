@@ -5,8 +5,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class WelcomeController {
-    @GetMapping
-    public String welcomeToTraining(){
+    @GetMapping(value = "/welcome")
+    public String welcomeToTraining() {
         return "Hello from Archis";
+    }
+
+    @GetMapping(value = "/hello")
+    public String helloToTraining() {
+        return "Hello from Nithisha";
+    }
+
+    @GetMapping(value = "/spotless")
+    public String helloToSpotless() {
+        return "hello to spotless";
     }
 }
